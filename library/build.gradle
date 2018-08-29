@@ -14,14 +14,15 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_7
         targetCompatibility JavaVersion.VERSION_1_7
     }
+    buildToolsVersion '27.0.3'
 }
 
 dependencies {
-    compile "com.android.support:recyclerview-v7:${rootProject.supportLibsVersion}"
+    implementation "com.android.support:recyclerview-v7:${rootProject.supportLibsVersion}"
 }
 
-apply from: 'gradle-maven-push.gradle'
-
-afterEvaluate {
-    androidJavadocs.classpath += project.android.libraryVariants.toList().first().javaCompile.classpath
-}
+//apply from: 'gradle-maven-push.gradle'
+//
+//afterEvaluate {
+//    androidJavadocs.classpath += project.android.libraryVariants.toList().first().javaCompile.classpath
+//}

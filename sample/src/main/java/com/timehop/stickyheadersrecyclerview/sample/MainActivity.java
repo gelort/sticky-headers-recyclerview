@@ -142,9 +142,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    public RecyclerView.ViewHolder onCreateHeaderViewHolder(ViewGroup parent) {
+    public RecyclerView.ViewHolder onCreateHeaderViewHolder(ViewGroup parent, int position) {
       View view = LayoutInflater.from(parent.getContext())
-          .inflate(R.layout.view_header, parent, false);
+              .inflate(R.layout.view_header, parent, false);
       return new RecyclerView.ViewHolder(view) {
       };
     }
