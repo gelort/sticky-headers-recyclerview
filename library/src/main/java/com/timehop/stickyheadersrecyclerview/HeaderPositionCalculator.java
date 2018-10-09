@@ -57,6 +57,10 @@ public class HeaderPositionCalculator {
                 View header = mHeaderProvider.getHeader(parent, position);
                 int headerHeight = header.getHeight();
 
+                if (headerHeight <= itemView.getHeight()) {
+                    headerHeight = 0;
+                }
+
                 offset = itemView.getTop() - headerHeight;
             } else {
 
