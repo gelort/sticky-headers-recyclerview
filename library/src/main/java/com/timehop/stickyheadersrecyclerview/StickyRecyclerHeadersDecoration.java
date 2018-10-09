@@ -110,7 +110,7 @@ public class StickyRecyclerHeadersDecoration extends RecyclerView.ItemDecoration
           continue;
       }
 
-      boolean hasStickyHeader = mHeaderPositionCalculator.hasStickyHeader(itemView, mOrientationProvider.getOrientation(parent), position);
+      boolean hasStickyHeader = mHeaderPositionCalculator.hasStickyHeader(itemView, parent, mOrientationProvider.getOrientation(parent), position);
       if (hasStickyHeader || mHeaderPositionCalculator.hasNewHeader(position, mOrientationProvider.isReverseLayout(parent))) {
         View header = mHeaderProvider.getHeader(parent, position);
         //re-use existing Rect, if any.
