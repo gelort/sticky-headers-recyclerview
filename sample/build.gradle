@@ -28,7 +28,6 @@ android {
 
 dependencies {
     implementation project(':library')
-    implementation "com.android.support:appcompat-v7:${rootProject.supportLibsVersion}"
-    implementation "com.android.support:design:${rootProject.supportLibsVersion}"
-    implementation "com.android.support:support-v4:${rootProject.supportLibsVersion}"
+    implementation "androidx.appcompat:appcompat:${rootProject.appcompat}"
+    implementation "com.google.android.material:material:${rootProject.material}"
 }
